@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>chatty web client</title>
+        <title>robomonkey &middot; chat</title>
         <link href="/client/style.css" rel="stylesheet"/>
         <script src="/socket.io/socket.io.js"></script>
         <script src="/client/lib/jquery.js"></script>
@@ -22,24 +22,24 @@
         </script>
     </head>
     <body>
-        <div id="header">
-            <h1>chatty web client</h1>
-        </div>
-        <div id="main">
+        <header id="header">
+            <h1>robomonkey</h1>
+        </header>
+        <main id="main">
             <form id="status-update-form" action="javascript:void(0);" novalidate="novalidate">
                 <div>
-                    <input type="text" pattern="[a-zA-Z0-9]+[a-zA-Z0-9\s]+" required autofocus placeholder="type a message, hit return"/>
-                    <button type="button">leave the chatroom</button>
+                    <input type="text" pattern="[a-zA-Z0-9]+[a-zA-Z0-9\s]+" required autofocus placeholder="Hit return to send..."/>
+                    <button type="button">Leave</button>
                 </div>
             </form>
-            <div id="messages">
-                <h2>messages</h2>
+            <section id="messages">
+                <h2>Messages</h2>
                 <ul></ul>
-            </div>
-            <div id="users">
-                <h2>users</h2>
+            </section>
+            <aside id="users">
+                <h2>Online</h2>
                 <ul></ul>
-            </div>
-        </div>
+            </aside>
+        </main>
     </body>
 </html>
