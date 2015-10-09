@@ -28,7 +28,7 @@
         <div id="main">
             <form id="status-update-form" action="javascript:void(0);" novalidate="novalidate">
                 <div>
-                    <input type="text" required autofocus placeholder="type a message, hit return"/>
+                    <input type="text" pattern="[a-zA-Z0-9]+[a-zA-Z0-9\s]+" required autofocus placeholder="type a message, hit return"/>
                     <button type="button">leave the chatroom</button>
                 </div>
             </form>
