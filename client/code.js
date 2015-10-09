@@ -6,13 +6,13 @@ $(document).ready(function() {
         var socket = io.connect(socketURI);
         // These are events reserved by socket.io, and we listen in.
         socket.on('connect', function() {
-            messages.info('connection to server established.');
+            messages.info('Connected');
         });
         socket.on('error', function() {
-            messages.error('sorry, we are experiencing technical difficulties.');
+            messages.error('Error. Standby&hellip;');
         });
         socket.once('disconnect', function() {
-            messages.info('you have disconnected from the server.');
+            messages.info('Disconnected');
             users.clear();
         });
         // These are custom events, published by the server.
