@@ -1,140 +1,33 @@
-/* Colors picked from: http://colorschemedesigner.com/#2V41Tk4jzxQq3 */
-
-* {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    
-    color: #6394A1;
-    background-color: #0B323D;
-}
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.5em;
-}
-
-
-
-#header > h1 {
-    margin: 0;
-    padding: 0.2em;
-    text-align: right;
-
-    background-color: #0B323D;
-}
-
-
-
-#main {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    
-    background-color: black;
-}
-
-
-
-#status-update-form {
-    padding: 0.5em;    
-}
-#status-update-form input[type='text'] {
-    padding: 0.3em;
-    width: 50em;
-}
-#status-update-form input[type='text'] {
-    outline: none;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-}
-#status-update-form input[type='text']:invalid {
-    border: 3px solid #9C473A;
-    /* for mozilla */
-    box-shadow: 0 0 0 transparent;
-}
-#status-update-form input[type='text']:valid {
-    border: 3px solid #2B7341;
-}
-#status-update-form button {
-    -webkit-appearance: none;
-    color: #6394A1;
-    background-color: #0B323D;
-    border: 0.2em solid #6394A1;
-    
-    border-radius: 0.1em;
-    padding: 0.5em;
-    text-align: center;
-}
-#status-update-form button:disabled {
-    color: #888;
-    border-color: #888;
-    background-color: black;
-}
-
-
-
-#messages {
-    width: 75%;
-    height: 100%;
-    float: left;
-    border-top: 3px solid #0B323D;
-}
-#messages > h2 {
-    margin: 0;
-    padding: 0.5em;
-
-    font-size: 1em;
-}
-#messages > ul {
-    margin: 0;
-    padding: 0 0.5em;
-    list-style: none;
-}
-.message {
-    font-family: "Courier New", Courier, monospace;
-}
-.message.chat {
-    color: #2B7341;
-}
-.message.echo {
-    color: #265461;
-}
-.message.info {
-    background-color: #2B7341;
-    color: black;
-    border-bottom: 1px solid black;
-}
-.message.error {
-    background-color: #9C473A;
-    color: black;
-    border-bottom: 1px solid black;
-}
-
-
-
-#users {
-    width: 25%;
-    height: 100%;
-    float: left;
-    border-top: 3px solid #0B323D;
-    border-left: 3px solid #0B323D;
-}
-#users > h2 {
-    margin: 0;
-    padding: 0.5em;
-
-    font-size: 1em;
-}
-#users > ul {
-    margin: 0;
-    padding: 0 0.5em;
-    list-style: none;
-    
-    font-family: "Courier New", Courier, monospace;
+@charset "UTF-8";
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-rendering:auto;-webkit-font-smoothing:antialiased;-webkit-font-smoothing:subpixel-antialiased;-moz-osx-font-smoothing:grayscale}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+body,html{width:100%;height:100%;margin:0;padding:0;color:rgb(7,7,22);background-color:rgb(255,255,255);overflow-x:hidden}
+body{position:relative;min-height:100%;margin: 0;padding: 0;direction: ltr;}
+body, button, input, label, select, td, textarea{font-family:"SF UI Text","Roboto","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1rem;line-height: 1.28;}
+#header{position:absolute;top:0;left:0;right:0;height:2.4em}
+#header h1{text-align:center;margin:0;font-size:2em;padding:.2em 0;background-color:#fff;line-height:1}
+#main{position:relative;width:100%;top:3em;background-color:#fff;-webkit-touch-callout: none;
+    -webkit-user-select: none;}
+#status-update-form{padding:.3em;position:fixed;z-index:1000;bottom:0;left:0;right:0;border-top:1px solid #aaa;}
+#status-update-form input[type="text"]{border:none;-webkit-appearance:none;-moz-appearance:none;padding:.3em;width:100%;max-width:75%;border-radius:6px;outline:0 none;-moz-transition:all .5s linear;-o-transition:all .5s linear;-webkit-transition:all .5s linear;transition:all .5s linear;box-shadow:none}
+#status-update-form input[type="text"]:invalid{box-shadow: 0 2px 0 #f03d25}
+#status-update-form input[type="text"]:valid{box-shadow:0 2px 0 rgb(11, 211, 24);}
+#status-update-form button{position:absolute;right:0;bottom:0;z-index:1001;-webkit-appearance:none;-moz-appearance:none;color:#f03d25;background-color:#fff;border:1px solid #f03d25;border-radius:10px;padding:.3em;text-align:center;max-width:30%;min-width:10%;text-shadow:none;margin:3px;}
+#status-update-form button:disabled {color:#888;border-color:#eee;background-color:#eee}
+#messages{position:relative;width:75%;height:100%;border-top:1px solid #eee;}
+#messages>h2{margin:0;padding:.3em;font-size:1em}
+#messages>ul{margin:0;padding:0 .3em;list-style:none}
+.message{word-wrap: break-word;-webkit-touch-callout: initial;zoom:1;-webkit-user-select: text;border-radius:6px;padding:.3em;}
+.message.chat {background-color:#eee;color:#222;border-bottom:2px solid #fff;text-align:left}
+.message.echo {background-color:#eee;color:#222;border-bottom:2px solid #fff;text-align:left;}
+.message.info {background-color:#0084ff;color:#fff;border-bottom:2px solid #fff;text-align:right}
+.message.error{background-color:#f03d25;color:#fff;border-bottom:2px solid #fff;text-align:right}
+.message:first-child,#users>ul>li:first-child{-webkit-animation:pulse 200ms cubic-bezier(0,0,.2,1) forwards;animation:pulse 200ms cubic-bezier(0,0,.2,1) forwards}
+#users {position:absolute;top:0;right:0;height:100%;width:25%;border-top:1px solid #eee;border-left:1px solid #eee;}
+#users>h2 { margin: 0; padding: .3em; font-size: 1em; }
+#users>ul { margin: 0; padding: 0 .3em; list-style: none}
+@-webkit-keyframes pulse{0%{-webkit-transform:scale(0);transform:scale(0);opacity:0}50%{-webkit-transform:scale(.99);transform:scale(.99)}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1;visibility:visible}}@keyframes pulse{0%{-webkit-transform:scale(0);transform:scale(0);opacity:0}50%{-webkit-transform:scale(.99);transform:scale(.99)}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1;visibility:visible}}
+@media all and (max-width:768px){
+  #users,#status-update-form button{z-index:-999;display:none;visibility:hidden;width:0;height:0;transform:scale(0);font-size:0;line-height:0;}
+  #messages{width:100%;}
 }
