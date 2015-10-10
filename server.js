@@ -88,7 +88,7 @@ io.sockets.on('connection', function (socket) {
             io.sockets.emit('chat', Message(messages.hasJoinedRoom(user)));
         }
         else {
-            socket.emit('chat', Message(messages.invalidName(user), User('server'), 'error'));
+            socket.emit('chat', Message(messages.invalidName(user), User('Robomonkey'), 'error'));
             disconnectSocket();
         }
     });
@@ -97,11 +97,11 @@ io.sockets.on('connection', function (socket) {
             io.sockets.emit('chat', Message(data.message, user, "chat"));
         }
         else if (!user.name) {
-            socket.emit('chat', Message(messages.invalidRequireName(), User('server'), 'error'));
+            socket.emit('chat', Message(messages.invalidRequireName(), User('Robomonkey'), 'error'));
             disconnectSocket();
         }
         else {
-            socket.emit('chat', Message(messages.invalidNameChange(), User('server'), 'error'));
+            socket.emit('chat', Message(messages.invalidNameChange(), User('Robomonkey'), 'error'));
             disconnectSocket();
         }
     });
