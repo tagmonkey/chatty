@@ -1,1 +1,1 @@
-this.User=function(name){return{"name":name||"","isValid":function(){return/^\w+$/g.test(this.name)}}};var User=this.User;this.Message=function(message,user,type){return{"user":user||User("server"),"message":message,"type":type||"info"}};
+this.User=function(name){return{"name":name||"","isValid":function(){return/^\w+$/g.test(this.name)}}};var User=this.User;this.Message=function(message,user,type){return{"user":user||User("Robomonkey"),"message":message,"type":type||"info"}};
