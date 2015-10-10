@@ -1,0 +1,11 @@
+{
+	"name": "Robomonkey",
+	"icons": [
+		{
+			"src": "\https://i.imgur.com/7oPOAiA.png",
+			"sizes": "16x16",
+			"type": "image\/png",
+			"density": "0.75"
+		}
+	]
+}
